@@ -1,0 +1,5 @@
+print('hello world!')
+print(1 + 2)
+print(7*8)
+print()
+print( "the end","or is it?", "ugjhgfvj jhefsjhgfyvgjh vkjkfjh herfjbefa",3)
