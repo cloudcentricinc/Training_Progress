@@ -1,0 +1,9 @@
+def sumNum(Num):
+    x = 0
+    for i in range(Num):
+        sum = x +i
+        print("Current Number", i, "Previous Number", x, "Sum", sum)
+        sum = x
+            
+print("Printing current and previous number sum in a given range(10)")
+sumNum(10)
