@@ -1,0 +1,8 @@
+def First_And_Last_Same(num):
+    print("Given list is ", num)
+    First = num[0]
+    Last = num[-1]
+    if (First == Last):
+        return True
+    else:
+        return False
