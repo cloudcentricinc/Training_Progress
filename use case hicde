@@ -1,0 +1,97 @@
+Financial service
+General Definition for Hive it takes large amount of unstructured data and place it into a structured view as shown in., that can be used by business analysts by the business tools. Hive supports use cases such as Ad-hoc queries, summarization, data analysis. HIVEQL can also be exchange with custom scalar functions means user defined functions, aggregations and table functions. With Should have basic knowledge in using.
+•	User should have stable build of Hadoop
+•	Machine Should have Java 1,6 installed
+•	Basic Java Programming skills
+•	Basic SQL Knowledge
+•	Basic Knowledge of Linux
+Overview of Commands to create database in hive.
+1.create database finance;
+show database;
+2.create database finance_bkp comment 'holds backup dta';
+show database
+3.create database finance_bkp_extnd with DBPROPERTIES('creator'= 'teja', date ='10-2-1090');
+describe database extended finance_bkp_extnd;
+4 show database;
+---
+---
+---
+finance
+----
+--
+use finance;
+5.create table customer
+	>cell_no int,
+	> city string,
+	>address int,
+	>name string)
+	 row format delimited fields terminated by','
+table creation
+6.show table
+--------------------------------------
+7.gedit customer.input #how to load a data
+---------------------------------------
+enter the number,city,address,name.
+----------------------------------------
+8.hive>select * from finance;
+9.LOAD DATA LOCAL INPATH ‘/home/----/----/---/hive_trail/finance.input' INTO TABLE customer
+to check it is loaded are not we have to run command called
+10.select * from customers.
+11. describe customers;
+12.describe extended customer.
+13. create table customer2(
+	>cell_no int,
+	> city string,
+	>address int,
+	>name string)
+                             Hive Real-Time Use Case(how JP morgon chase works)
+
+•	Financial service overview
+Financial services are a broad term used to describe the various offerings within the finance industry–encompassing everything from insurance and money management to payments and digital banking technology.
+	There are a multitude of stakeholders and moving parts within financial services, from credit card issuers and processors, to legacy banks and emerging challengers. Few of the biggest financial companies are
+•	Berkshire Hathaway, Inc.
+•	 JP Morgan Chase & Co
+•	 Bank of America
+•	HDFC Bank Limited
+•	Problem statement
+Few of the problem statements are the problems that financial companies face is., each product type has many special attributes and measured facts that are not shared by the other products. For instance, checking accounts have minimum balances, overdraft limits, service charges, and other measures relating to online banking; time deposits such as certificates of deposit have few attribute overlaps with checking, but have maturity dates, compounding frequencies, and current interest rate.
+•	Reason for Cybercrime in finance.
+•	Lack of coordinated information technology systems.
+•	Reason for storage and processing of data.
+Fraud detection are cybercrime can overcome using virtual account number is lot like tokenized schema which gives full authority to a card holder. When card holder makes a transaction their actual card number will be not given to the merchant.( JPMorgan is not only mining the trading data for analysis but is also tracking the phone calls and emails to identify the probabilities of any fraudulent activities that are impossible to detect. JPMorgan uses analytics software developed by Palantir to keep a track of employee communications to identify any indications of internal fraud).
+Big data provides both opportunities and obstacles for financial service providers. Tapping into social media, consumer databases, and even news feeds can help banks better serve their customers, while better protecting their own interests.
+Fortunately, data analytics solutions are emerging with the potential to transform asset management, trading, risk management, and other financial services.
+ Tables in Financial Services.
+o	Branch Table: Branch_Name, Branch_city, Assets
+o	Customer Table: Customer_nmae,Customer_city
+o	Account Table: Account_number,Branch_Name,Balance
+o	Loan Table: loa _number,Branch_name
+o	Depositor Table:Customer_name,Account_number
+o	Borrower Table:Customer_name,loan_number
+
+•	Data sources for Financial Services.
+o	Through online activity this means from online purchases.
+o	credit card records.
+o	Knowing your target audience.
+o	Conducting a sales call
+o	Social sentiments
+o	Marketing
+o	CRM
+o	Communication
+o	Census
+o	Documentation
+o	Probability and statistics.
+•	Ingestion process In banking sector.
+o	Critical Analysis is only possible when combining data from multiple sources. For making business decisions, we should have a single image of all the data coming.
+o	In the time, data keeps increasing in the Data ingestion framework, new data comes, and old data modified. Each new integration can take anywhere from a few days to a few months to complete.
+o	Move ETL and storage jobs to Hadoop powered by MapR, which cuts costs and timelines significantly.
+o	Apache Drill can extend queries to data sets spanning multiple years, not just the traditional weeks and months.
+•	Hive tables layout
+o	Partitioning
+o	Bucketing
+o	Block sampling
+o	Parallel Execution
+
+https://www.dezyre.com/article/how-jpmorgan-uses-hadoop-to-leverage-big-data-analytics/142
+https://hexanika.com/hadoop-in-banking-the-game-changer/
+Palantir Metropolis (formerly known as Palantir Finance) was software for data integration, information management and quantitative analytics. The software connects to commercial, proprietary and public data sets and discovers trends, relationships and anomalies, including predictive analytics.
