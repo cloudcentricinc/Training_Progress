@@ -1,0 +1,7 @@
+SELECT TOP 1 Salary
+FROM (
+ SELECT DISTINCT TOP n Salary
+ FROM Worker 
+ ORDER BY Salary DESC
+ )
+ORDER BY Salary ASC;
